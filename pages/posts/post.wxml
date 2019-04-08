@@ -4,4 +4,17 @@
     <swiper-item><image src='/images/dj.jpeg'></image></swiper-item>
     <swiper-item><image src='/images/tg.jpeg'></image></swiper-item>
   </swiper>
+  <view>
+    <view>
+      <image src="/images/avatar/1.jpg"></image>
+      <text>Apr 8 2019</text>
+    </view>
+    <text>短视频+电商，新的突破口？</text>
+    <image src='/images/post/dsp.jpeg'></image>
+    <text>“短视频+电商”模式潜力巨大，前景可期，可从目前国内的实践来看，虽然已有不少平台涉足其中，但规模化推进并取得实质性进展的还不多，营销效果也是参差不齐。       </text>
+    <view>
+      <image></image>
+      <text></text>
+    </view>
+  </view>
 </view>
