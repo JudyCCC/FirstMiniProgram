@@ -1,0 +1,7 @@
+<view>
+  <swiper indicator-dots='true' autoplay='true'>
+    <swiper-item><image src='/images/wx.jpeg'></image></swiper-item>
+    <swiper-item><image src='/images/dj.jpeg'></image></swiper-item>
+    <swiper-item><image src='/images/tg.jpeg'></image></swiper-item>
+  </swiper>
+</view>
