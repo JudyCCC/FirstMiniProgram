@@ -10,10 +10,13 @@
   <text class='title'>{{postData.title}}</text>
   <view class='tool'>
     <view class='circle-img'>
-      <text class='icon-back shoucang-back'>
+      <text wx:if='{{collected}}' catchtap='onCollectionTap' class='icon-back shoucang-back'>
         <text class='iconfont icon-shoucang1'></text>
       </text>
-      <text class='icon-back fenxiang-back'>
+      <text wx:else='{{collected}}' catchtap='onCollectionTap' class='icon-back weishoucang-back'>
+        <text class='iconfont icon-shoucang1'></text>
+      </text>
+      <text catchtap='onShareTap' class='icon-back fenxiang-back'>
         <text class='iconfont icon-fenxiang'></text>
       </text>
     </view>

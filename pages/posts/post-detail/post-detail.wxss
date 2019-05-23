@@ -105,6 +105,10 @@
   background: blue;
 }
 
+.weishoucang-back{
+  background: grey;
+}
+
 .fenxiang-back{
   background: green;
   margin-left: 30rpx;
