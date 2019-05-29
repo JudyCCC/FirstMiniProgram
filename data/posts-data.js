@@ -8,7 +8,12 @@ const posts_content = [{
   avatar: '/images/avatar/2.jpg',
   postId:0,
   detail:'“短视频+电商”模式潜力巨大，前景可期，可从目前国内的实践来看，虽然已有不少平台涉足其中，但规模化推进并取得实质性进展的还不多，营销效果也是参差不齐。',
-  author: '胡歌'
+  author: '胡歌',
+  music: {
+    url: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
+    title: '此时此刻1',
+    coverImg: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+  }
 }, {
   date: 'Apr 9 2019',
   title: 'B端产品，远比想象中更需要情感化设计',
@@ -19,7 +24,12 @@ const posts_content = [{
   avatar: '/images/avatar/1.jpg',
   postId:1,
   detail: 'C端产品早就将情感化纳入基础的设计体系，而B端产品的情感化设计却远未达到行业标准。人们或许都认为B端设计存在过多的客观因素影响，情感化可能不是特别必要。但是事实上，B端产品也需要情感的补充和协调，它远比你想象中更需要情感化设计。',
-  author: '紫萱'
+    author: '紫萱',
+    music: {
+      url: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
+      title: '此时此刻2',
+      coverImg: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+    }  
   }, {
     date: 'Apr 11 2019',
     title: '高通发布专用AI加速器Cloud AI 100，百度阿里腾讯都感兴趣',
@@ -30,7 +40,12 @@ const posts_content = [{
     avatar: '/images/avatar/3.jpg',
     postId:2,
     detail: '2019年4月9日，在旧金山举行的高通 AI Day 上，这家芯片技术巨头正式宣布进军云计算市场，并宣布了面向人工智能推理计算的第一枚专用 AI 加速器：Qualcomm Cloud AI 100。',
-    author: '雪见'
+    author: '雪见',
+    music: {
+      url: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
+      title: '此时此刻3',
+      coverImg: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+    }
   }, {
     date: 'Apr 11 2019',
     title: '维基解密创始人阿桑奇被英国警方逮捕 大喊“英国必须抵抗',
@@ -41,7 +56,12 @@ const posts_content = [{
     avatar: '/images/avatar/4.jpg',
     postId:3,
     detail: '11日，维基解密创始人阿桑奇被英国警方逮捕，在阿桑奇被拖出厄瓜多尔大使馆时，他大喊着，“英国必须抵抗”。',
-    author: '长卿'
+    author: '长卿',
+    music: {
+      url: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
+      title: '此时此刻4',
+      coverImg: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+    }
   }, {
     date: 'Apr 11 2019',
     title: '黑洞照片也能卖钱？视觉中国：不能商用 自媒体使用或被追责',
@@ -52,7 +72,12 @@ const posts_content = [{
     avatar: '/images/avatar/5.jpg',
     postId:4,
     detail: '视觉中国：这里我们是有版权的，然后图片现在的话本身只能用在编辑用途上，如果商用的话这边是做不了授权的。编辑使用就一般是媒体的新闻报道。',
-    author: '泡泡'
+    author: '泡泡',
+    music: {
+      url: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46',
+      title: '此时此刻5',
+      coverImg: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+    }
   }]
 
   module.exports = {

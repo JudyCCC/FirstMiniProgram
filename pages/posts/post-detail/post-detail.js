@@ -3,6 +3,7 @@ var { posts_content } = require('../../../data/posts-data.js');
 Page({
   data: {
     postData: [],
+    isPlayingMusic: false,    // 是否播放音乐
   },
 
   onLoad: function(option){
@@ -34,13 +35,47 @@ Page({
       postsCollected[postId] = false;
       wx.setStorageSync('posts_collected', postsCollected)
     }
+
+    var that = this;
+    wx.onBackgroundAudioPlay(function(){
+      that.setData({
+        isPlayingMusic: true,
+      })
+    });
+    wx.onBackgroundAudioPause(function(){
+      that.setData({
+        isPlayingMusic: false,
+      })
+    });
   
   },
 
   onCollectionTap:function(event){
+    this.getPostsCollectedSyc();
+    // this.getPostsCollectedAsy();
+  },
+
+  getPostsCollectedAsy:function(){
+    var that = this;
+    wx.getStorage({
+      key:'posts_collected',
+      success:function(res){
+        var postsCollected = wx.getStorageSync('posts_collected');
+
+        var postCollected = postsCollected[that.data.currentPostId];
+        // 收藏状态取反
+        postCollected = !postCollected;
+        postsCollected[that.data.currentPostId] = postCollected;
+
+        that.showToast(postsCollected, postCollected);
+      }
+    })
+  },
+
+  getPostsCollectedSyc:function(){
     var postsCollected = wx.getStorageSync('posts_collected');
 
-    var postCollected = postsCollected[this.data.currentPostId]; 
+    var postCollected = postsCollected[this.data.currentPostId];
     // 收藏状态取反
     postCollected = !postCollected;
     postsCollected[this.data.currentPostId] = postCollected;
@@ -83,6 +118,48 @@ Page({
         }
       }
     })
+  },
+
+  onShareTap:function(event){
+    var itemList = [
+      '分享给微信好友',
+      '分享到朋友圈',
+      '分享到QQ',
+      '分享到微博'
+    ];
+    wx.showActionSheet({
+      itemList: itemList,
+      itemColor: '#405f80',
+      success:function(res){
+        // res.cancel 用户是不是点击了取消按钮
+        // res.tapIndex 数组元素的序号，从0开始
+        wx.showModal({
+          title: '用户分享到了' + itemList[res.tapIndex],
+          content: '用户是否取消' + res.cancel + '现在无法实现分享功能，什么时候能实现呢？',
+        })
+      }
+    })
+  },
+
+  onMusicTap:function(event){
+    var currentPostId = this.data.currentPostId;
+    var postData = posts_content[currentPostId];
+    var isPlayingMusic = this.data.isPlayingMusic;
+    if(isPlayingMusic){
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    }else{
+      wx.playBackgroundAudio({
+        dataUrl: postData.music.url,
+        title: postData.music.title,
+        coverImgUrl: postData.music.coverImg
+      });
+      this.setData({
+        isPlayingMusic: true
+      });
+    }
   }
 
 })
