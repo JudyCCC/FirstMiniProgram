@@ -1,9 +1,9 @@
 <import src="post-item/post-item-template.wxml" />
 <view>
-  <swiper indicator-dots='true' autoplay='true'>
-    <swiper-item><image src='/images/wx.jpeg'></image></swiper-item>
-    <swiper-item><image src='/images/dj.jpeg'></image></swiper-item>
-    <swiper-item><image src='/images/tg.jpeg'></image></swiper-item>
+  <swiper catchtap="onSwiperTap" indicator-dots='true' autoplay='true'>
+    <swiper-item><image src='/images/post/gtf.jpeg' data-postId="2"></image></swiper-item>
+    <swiper-item><image src='/images/post/wjj.jpeg' data-postId="3"></image></swiper-item>
+    <swiper-item><image src='/images/post/hdz.png' data-postId="4"></image></swiper-item>
   </swiper>
   <block wx:for="{{posts_content}}" wx:for-item="item" wx:for-index="index">
     <!-- template -->
