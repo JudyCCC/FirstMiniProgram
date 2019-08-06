@@ -20,14 +20,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log('onready');
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('onshow');
     
   },
 
@@ -35,15 +33,12 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
-    console.log('onHide');
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log('onUnload');
     
   },
 
@@ -70,7 +65,6 @@ Page({
 
   onPostTap: function(event){
     var postid = event.currentTarget.dataset.postid;
-    console.log('postid') 
     wx.navigateTo({
       url: 'post-detail/post-detail?id=' + postid,
     })

@@ -1,12 +1,16 @@
 <template name="starsTemplate">
   <view class='stars-container'>
-    <view class='stars'>
-      <image src="/images/icon/collected.png"></image>
-      <image src="/images/icon/collected.png"></image>
-      <image src="/images/icon/collected.png"></image>
-      <image src="/images/icon/collected.png"></image>
-      <image src="/images/icon/collected.png"></image>
-    </view>
-    <text class="star-score">{{average}}</text>
+  <view class='stars'>
+    <block wx:for="{{stars}}" wx:key="key" wx:for-item="i">
+      <image wx:if="{{i}}" src='/images/icon/collected.png'></image>
+      <image wx:else src='/images/icon/collect.png'></image>
+    </block>
+    <!-- 半星的用法
+  [1,1,1,2,0]
+    <image wx:if="{{i == 1}}" src='...'></image>
+    <image wx:elif="{{i == 2}}" src='...'></image>
+    <image wx:else="{{i == 1}}" src='...'></image> -->
+  </view>
+    <text class="star-score">{{score}}</text>
   </view>
 </template>
