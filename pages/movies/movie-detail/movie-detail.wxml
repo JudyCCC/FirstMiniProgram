@@ -35,12 +35,12 @@
   </view>
   <view class='hr'></view>
   <view class='syhopsis'>
-    <text style='color: #999999'>剧情简介</text>
+    <text class='synopsis-font'>剧情简介</text>
     <text class='summary-content'>{{movie.summary}}</text>
   </view>
   <view class='hr'></view>
   <view class='cast'>
-    <text style='color: #999999;margin-bottom: 40rpx;'>影人</text>
+    <text class='cast-font'>影人</text>
     <scroll-view class='cast-imgs' scroll-x='true' style='width: 100%'>
       <block wx:for='{{movie.castsInfo}}' wx:for-item='item' wx:key='id'>
         <view class='cast-container'>

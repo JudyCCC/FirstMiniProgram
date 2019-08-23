@@ -97,4 +97,17 @@ Page({
     wx.stopPullDownRefresh();
   },
 
+  onReady: function(e){
+    wx.setNavigationBarTitle({
+      title: this.data.navigateTitle,
+    })
+  },
+
+  onMovieTap: function(e){
+    let movieId = e.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: '../movie-detail/movie-detail?id=' + movieId,
+    })
+  },
+
 })
